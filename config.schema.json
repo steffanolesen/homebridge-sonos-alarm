@@ -1,0 +1,36 @@
+{
+  "pluginAlias": "homebridge-sonos-alarm",
+  "pluginType": "accessory",
+	"singular": false,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true,
+        "default": "SonosAlarmSwitch"
+      },
+      "playerName": {
+        "title": "Player Name",
+        "type": "string",
+        "required": true,
+        "default": "Bedroom"
+      },
+      "mp3uri": {
+        "title": "MP3 Uri",
+        "type": "string",
+        "required": true,
+        "default": "https://www.steffan-olesen.dk/music/iphone_alarm.mp3"
+      },
+      "volume": {
+        "title": "Volume",
+        "type": "integer",
+        "required": true,
+        "default": 50,
+        "minimum": 0,
+        "maximum": 100
+      }
+    }
+  }
+}
