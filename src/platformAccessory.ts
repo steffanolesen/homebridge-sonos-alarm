@@ -62,7 +62,7 @@ export class SonosAlarmAccessory implements AccessoryPlugin {
 
           manager.Devices.forEach(d => {
             this.log.debug('Device %s is joined in %s', d.Name, d.GroupName);
-            if (d.Name === this.playerName) {
+            if (d.Name === this.playerName || this.playerName === "ALL") {
               d.PlayNotification({
                 trackUri: this.mp3uri,
                 onlyWhenPlaying: false,
